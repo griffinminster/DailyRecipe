@@ -30,10 +30,6 @@ cooks_basic = 'https://www.cooksillustrated.com'
 cooks_source = urllib.request.urlopen(cooks)
 cooks_soup = BeautifulSoup(cooks_source, 'lxml')
 
-food = 'https://www.food.com/recipe/all/editor-pick'
-food_source = urllib.request.urlopen(food)
-food_soup = BeautifulSoup(food_source, 'lxml')
-
 
 full_list = []
 
