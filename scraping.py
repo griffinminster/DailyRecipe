@@ -1,7 +1,7 @@
-from bs4 import BeautifulSoup
-import urllib.request
 import re
+import urllib.request
 import gspread
+from bs4 import BeautifulSoup
 from oauth2client.service_account import ServiceAccountCredentials
 
 
@@ -16,12 +16,11 @@ def pad(inputs):
 
 def cut_url(images):
     i = -1
-    for j in range(len(images)):
-        if images[j] == ' ':
+    for j, pic in enumerate(images):
+        if pic == ' ':
             i = j
             break
     return images[0:i]
-
 
 def main():
     scopes = [
